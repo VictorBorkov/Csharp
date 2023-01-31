@@ -1,7 +1,7 @@
 ﻿
 // Найти третью цифру числа или сообщить, что её нет
 
-int N = new Random().Next(-10000, 10001);
+int N = new Random().Next(-1000000000, 1000000001);
 Console.Write("Сгенерировано число: ");
 Console.WriteLine(N);
 
