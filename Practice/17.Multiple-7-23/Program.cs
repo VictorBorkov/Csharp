@@ -5,9 +5,7 @@ int N = int.Parse(Console.ReadLine());
 
 if (N % 7 == 0 && N % 23 == 0)
 {
-    Console.Write("Да, число ");
-    Console.Write(N);
-    Console.WriteLine(" является кратным числам 7 и 23");
+    Console.WriteLine("Да, число " + N + " является кратным числам 7 и 23");
 }
 else
 {
