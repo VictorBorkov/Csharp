@@ -1,30 +1,53 @@
 ﻿// Заполнить одномерный массив случайными числами
 
 
-void F(int[] col)    // метод заполнения массива
+void F(int[] collection)    // метод заполнения массива
 {
-    int i = 0;
+    int length = collection.Length;
+    int index = 0;
 
-    while (i < col.Length)
+    while (index < length)
     {
-        col[i] = new Random().Next(1, 10);
-        i++;
+        collection[index] = new Random().Next(1, 10);
+        index++;
     }
 }
 
-void P(int[] col2)    // метод вывода его на экран
+void P(int[] col)    // метод вывода его на экран
 {
-    int i2 = 0;
-
-    while (i2 < col2.Length)
-    {
-        Console.WriteLine(col2[i2]);
-        i2++;
-    }
+    int count = col.Length;
+    int position = 0;
     
+    while (position < count)
+    {
+        Console.WriteLine(col[position]);
+        position++;
+    }  
+}
+
+int Iof(int[] collection, int find)
+{
+    int count = collection.Length;
+    int index = 0;
+    int position = 0;
+
+    while (index < count)
+    {
+        if (collection[index] == find)
+        {
+            position = index;
+            break;
+        }
+        index++;
+    }
+    return position;
 }
 
 int[] array = new int[10];
 
 F(array);  
 P(array);
+Console.WriteLine();
+
+int pos = Iof(array, 4);
+Console.WriteLine(pos);
