@@ -7,17 +7,50 @@ string D = Console.ReadLine()!;
 if (D.ToUpper() == "2D")
 {
     Console.WriteLine("Вы выбрали двухмерное пространство!");
-    
+    Console.WriteLine("Чтобы найти расстояние между двумя точками, введите координаты точек A(x1;y1) и B(x2;y2):");
+    Console.Write("- введите координату x1: ");
+    int X1 = Convert.ToInt32(Console.ReadLine()!);
+    Console.Write("- введите координату y1: ");
+    int Y1 = Convert.ToInt32(Console.ReadLine()!);
+    Console.Write("- введите координату x2: ");
+    int X2 = Convert.ToInt32(Console.ReadLine()!);
+    Console.Write("- введите координату y2: ");
+    int Y2 = Convert.ToInt32(Console.ReadLine()!);
+
+    double AB = 0;
+    AB = (X2 - X1) * (X2 - X1) + (Y2 - Y1) * (Y2 - Y1);
+    AB = Math.Sqrt(AB);
+
+    Console.WriteLine($"Расстояние между точками получилось: {AB}");
 }
+
 else if (D.ToUpper() == "3D")
 {
     Console.WriteLine("Вы выбрали треххмерное пространство!");
+    Console.WriteLine("Чтобы найти расстояние между двумя точками, введите координаты точек A(x1;y1;z1) и B(x2;y2;z2):");
+    Console.Write("- введите координату x1: ");
+    int X1 = Convert.ToInt32(Console.ReadLine()!);
+    Console.Write("- введите координату y1: ");
+    int Y1 = Convert.ToInt32(Console.ReadLine()!);
+    Console.Write("- введите координату z1: ");
+    int Z1 = Convert.ToInt32(Console.ReadLine()!);
+    Console.Write("- введите координату x2: ");
+    int X2 = Convert.ToInt32(Console.ReadLine()!);
+    Console.Write("- введите координату y2: ");
+    int Y2 = Convert.ToInt32(Console.ReadLine()!);
+    Console.Write("- введите координату z2: ");
+    int Z2 = Convert.ToInt32(Console.ReadLine()!);
+
+    double AB = 0;
+    AB = (X2 - X1) * (X2 - X1) + (Y2 - Y1) * (Y2 - Y1) + (Z2 - Z1) * (Z2 - Z1);
+    AB = Math.Sqrt(AB);
+
+    Console.WriteLine($"Расстояние между точками получилось: {AB}");
 }
 else
 {
     Console.WriteLine("Вы опечатались, введите 2D или 3D");
 }
-
 
 
 
