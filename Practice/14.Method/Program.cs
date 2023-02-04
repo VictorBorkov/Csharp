@@ -71,8 +71,14 @@ int Max(int arg1, int arg2, int arg3)
 
 int[] array = {23, 8, 19, 4, 200, 6, 54, 12, 90};
 
+array[1] = 350;
+Console.WriteLine(array[0]);
 
-int max = Max(Max(array[0], array[1], array[2]), Max(array[3], array[4], array[5]), Max(array[6], array[7], array[8]));
+int max = Max(
+    Max(array[0], array[1], array[2]),
+    Max(array[3], array[4], array[5]),
+    Max(array[6], array[7], array[8])
+    );
 
 
 Console.Write("Наибольшее значение: ");
