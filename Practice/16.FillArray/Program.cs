@@ -43,6 +43,7 @@ int Iof(int[] collection, int find)
     return position;
 }
 
+
 int[] array = new int[10];
 
 F(array);  
