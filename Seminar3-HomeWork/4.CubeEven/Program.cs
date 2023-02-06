@@ -1,13 +1,16 @@
 ﻿
-// Показать кубы чисел, заканчивающихся на четную цифру
+// Показать кубы чисел, заканчивающихся на четную цифру (все числа от 1 до N)
 
-Console.Write("Задайте любое целое число: ");
-int C = Convert.ToInt32(Console.ReadLine());
-int LD = 0;
+Console.Write("Задайте любое положительное значение, до которого будут считаться кубы чисел: ");
+int end = Convert.ToInt32(Console.ReadLine());
+int count = 1;
+int C = 1;
+int LD = 1;
 
-LD = C % 10;
-
-if (C == 0) Console.Write("Ноль не пойдёт ;D");
-else if (LD % 2 == 0) Console.Write("Куб вашего числа равен: " + C * C * C);
-else Console.Write("Ваше число заканчивается на нечётную цифру.");
-
+while (count < end)
+{
+    C = count * count * count;
+    LD = C % 10;
+    if (LD % 2 == 0) Console.Write(C + " ");
+    count++;
+}
