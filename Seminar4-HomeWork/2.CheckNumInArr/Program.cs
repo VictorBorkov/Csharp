@@ -15,7 +15,6 @@ void Show(int[] AnyArr)
 Console.Write("Задайте искомое число: ");
 int f = Convert.ToInt32(Console.ReadLine()!);
 
-
 void Find(int[] AnyArr)
 {
     int pos = -1;
@@ -29,5 +28,4 @@ void Find(int[] AnyArr)
 
 Console.WriteLine("Заданный массив:");
 Show(Arr);
-Console.WriteLine($"Искомое число: {f}");
 Find(Arr);
