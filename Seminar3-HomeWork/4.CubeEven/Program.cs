@@ -7,7 +7,9 @@ int count = 1;
 int C = 1;
 int LD = 1;
 
-while (count < end)
+if (end <= 1) Console.WriteLine("Задаваемое число должно быть больше 1!");
+
+while (count <= end)
 {
     C = count * count * count;
     LD = C % 10;
